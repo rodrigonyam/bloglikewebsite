@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Knowledge Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Keeping Up with the World of Medicine</h1>
+            <p class="tagline">Your Daily Medical Learning & Research</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- New Daily Entry Section -->
+            <section class="new-entry-section">
+                <h2>📝 New Daily Entry</h2>
+                <form id="entryForm" class="entry-form">
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="title">Entry Title</label>
+                        <input type="text" id="title" placeholder="e.g., Today's Medical Learning" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" required>
+                            <option value="">Select a category</option>
+                            <option value="diagnosis">Diagnosis</option>
+                            <option value="treatment">Treatment</option>
+                            <option value="symptoms">Symptoms</option>
+                            <option value="research">Research</option>
+                            <option value="clinical">Clinical Notes</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="condition">Medical Condition (Optional)</label>
+                        <input type="text" id="condition" placeholder="e.g., Diabetes, Hypertension">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="content">Entry Content</label>
+                        <textarea id="content" placeholder="Write your medical observations and notes..." rows="6" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit Entry</button>
+                </form>
+
+                <!-- Entries Display -->
+                <div id="entriesList" class="entries-list"></div>
+            </section>
+
+            <!-- Medical Conditions Section -->
+            <section class="conditions-section">
+                <h2>🔬 Medical Conditions & Diseases</h2>
+                <div class="filters">
+                    <input type="text" id="searchConditions" placeholder="Search medical conditions..." class="search-input">
+                    <button id="filterAllBtn" class="filter-btn active">All</button>
+                    <button id="filterCommonBtn" class="filter-btn">Common</button>
+                    <button id="filterSeriousBtn" class="filter-btn">Serious</button>
+                </div>
+                <div id="conditionsList" class="conditions-grid"></div>
+            </section>
+
+            <!-- Neurodiversity & Chronic Pain Section -->
+            <section class="neurodiversity-section">
+                <h2>🧠 Neurodiversity & Chronic Pain Conditions</h2>
+                <div class="filters">
+                    <input type="text" id="searchNeuro" placeholder="Search neurodiversity & chronic pain..." class="search-input">
+                    <button id="neuroFilterAllBtn" class="filter-btn active">All</button>
+                    <button id="neuroFilterAutismBtn" class="filter-btn">Autism</button>
+                    <button id="neuroFilterADHDBtn" class="filter-btn">ADHD/ADD</button>
+                    <button id="neuroFilterPainBtn" class="filter-btn">Chronic Pain</button>
+                </div>
+                <div id="neuroDiversityList" class="conditions-grid"></div>
+            </section>
+
+            <!-- Medical Facts Section -->
+            <section class="facts-section">
+                <h2>💡 Medical Facts & Knowledge Base</h2>
+                <div id="factsList" class="facts-list"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Medical Knowledge Hub | For Educational Purposes Only</p>
+        <p><em>Always consult with qualified healthcare professionals for medical advice.</em></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

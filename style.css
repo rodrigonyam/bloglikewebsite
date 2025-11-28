@@ -1,0 +1,534 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.header-container h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.header-container .tagline {
+    font-size: 1.2em;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+main {
+    min-height: calc(100vh - 250px);
+}
+
+section {
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 2em;
+    color: #667eea;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 15px;
+}
+
+/* Entry Form Styles */
+.entry-form {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 5px solid #667eea;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Entries List */
+.entries-list {
+    margin-top: 40px;
+}
+
+.entry-card {
+    background: #f8f9fa;
+    border-left: 5px solid #667eea;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.entry-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.entry-title {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #667eea;
+}
+
+.entry-meta {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.entry-date,
+.entry-category,
+.entry-condition {
+    font-size: 0.9em;
+    color: #666;
+    background: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.entry-category {
+    background: #e8eaf6;
+    color: #667eea;
+    font-weight: 600;
+}
+
+.entry-condition {
+    background: #f3e5f5;
+    color: #764ba2;
+}
+
+.entry-content {
+    color: #555;
+    line-height: 1.8;
+}
+
+.btn-delete {
+    background: #ff6b6b;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background 0.3s;
+}
+
+.btn-delete:hover {
+    background: #ff5252;
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.search-input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 1em;
+    min-width: 200px;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border: 2px solid #e0e0e0;
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #667eea;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+}
+
+/* Conditions Grid */
+.conditions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.condition-card {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 5px solid #667eea;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.condition-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.condition-card.serious {
+    border-left-color: #ff6b6b;
+}
+
+.condition-card.serious .condition-name {
+    color: #ff6b6b;
+}
+
+.condition-name {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #667eea;
+    margin-bottom: 10px;
+}
+
+.condition-severity {
+    display: inline-block;
+    font-size: 0.85em;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.condition-severity.common {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.condition-severity.serious {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.condition-description {
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.condition-details {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.condition-details-item {
+    margin-bottom: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.condition-details-item strong {
+    color: #667eea;
+}
+
+/* Neurodiversity Cards */
+.neuro-condition-card {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 5px solid #667eea;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.neuro-condition-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.neuro-condition-card.autism {
+    border-left-color: #6366f1;
+    background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+}
+
+.neuro-condition-card.adhd {
+    border-left-color: #f59e0b;
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+}
+
+.neuro-condition-card.chronic-pain {
+    border-left-color: #ef4444;
+    background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+}
+
+.neuro-category-badge {
+    display: inline-block;
+    font-size: 0.85em;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.7);
+    color: #333;
+}
+
+.neuro-condition-card.autism .neuro-category-badge {
+    background: #e0e7ff;
+    color: #4f46e5;
+}
+
+.neuro-condition-card.adhd .neuro-category-badge {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.neuro-condition-card.chronic-pain .neuro-category-badge {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.neurodiversity-note {
+    margin-top: 15px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.8);
+    border-left: 3px solid #667eea;
+    border-radius: 4px;
+    font-size: 0.85em;
+    line-height: 1.6;
+}
+
+.neurodiversity-note strong {
+    color: #667eea;
+}
+
+/* Sources Section */
+.sources-section {
+    margin-top: 15px;
+    padding: 12px;
+    background: rgba(102, 126, 234, 0.05);
+    border-left: 3px solid #667eea;
+    border-radius: 4px;
+    font-size: 0.85em;
+}
+
+.sources-section strong {
+    color: #667eea;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.sources-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sources-list li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.sources-list li:before {
+    content: "🔗";
+    position: absolute;
+    left: 0;
+}
+
+.sources-list a {
+    color: #667eea;
+    text-decoration: none;
+    transition: all 0.3s;
+    word-break: break-word;
+}
+
+.sources-list a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+/* Facts List */
+.facts-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.fact-card {
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+    padding: 20px;
+    border-radius: 8px;
+    border-top: 4px solid #667eea;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.fact-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.fact-category {
+    font-size: 0.85em;
+    font-weight: 700;
+    color: #667eea;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.fact-title {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.fact-content {
+    color: #555;
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 60px;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container h1 {
+        font-size: 2em;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+
+    .conditions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .facts-list {
+        grid-template-columns: 1fr;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .search-input {
+        min-width: 100%;
+    }
+
+    .entry-meta {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    color: #999;
+}
+
+.empty-state p {
+    font-size: 1.1em;
+}
