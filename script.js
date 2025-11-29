@@ -644,6 +644,82 @@ const faqItems = [
     {
         question: "What is the most important thing I can do for my health?",
         answer: "Build strong relationships and social connections - loneliness and isolation are linked to poor health outcomes. Also essential: regular exercise, healthy eating, adequate sleep, stress management, not smoking, limiting alcohol, and preventive healthcare. The combination of physical health behaviors and social-emotional well-being creates the foundation for optimal health. Start with small sustainable changes and build from there."
+    },
+    {
+        question: "How do I perform CPR (Cardiopulmonary Resuscitation)?",
+        answer: "CPR steps: 1) Check for responsiveness and breathing. 2) Call 911 immediately. 3) Place person on firm, flat surface. 4) Position yourself at their side. 5) Place the heel of one hand on center of chest, place other hand on top. 6) Push hard and fast at least 2 inches deep at 100-120 compressions per minute (pace of 'Stayin' Alive'). 7) Give 30 compressions, then 2 rescue breaths (if trained). 8) Continue until emergency services arrive or person shows signs of life. Hands-only CPR (compressions without breaths) is also effective."
+    },
+    {
+        question: "How do I treat severe bleeding?",
+        answer: "For severe bleeding: 1) Call 911. 2) Ensure scene is safe. 3) Wear gloves if available. 4) Apply direct pressure with clean cloth or bandage. 5) Keep pressure constant - don't remove the cloth, add more on top if bleeding continues. 6) Elevate the injured area above the heart if possible. 7) Apply pressure to pressure points (inside of arm above elbow, inside of groin) if bleeding won't stop. 8) Use a tourniquet above the wound as last resort if bleeding is life-threatening. 9) Don't remove embedded objects - stabilize around them. Keep person calm and warm while waiting for help."
+    },
+    {
+        question: "What should I do if someone is choking?",
+        answer: "For a choking person: 1) Ask 'Are you choking?' If they can't speak or cough, act. 2) Stand behind them and wrap arms around their waist. 3) Make a fist above their navel, below the ribcage. 4) Grasp your fist with your other hand. 5) Press hard into abdomen with quick, upward thrusts (Heimlich maneuver). 6) Repeat thrusts until object is expelled or person becomes unconscious. 7) If unconscious, position person on back, open airway, and look for object - remove if visible. 8) Begin CPR if needed. For infants (under 1 year): alternate 5 back blows between shoulder blades with 5 chest thrusts."
+    },
+    {
+        question: "How do I treat burns?",
+        answer: "For burns: 1) Stop the burning - remove from heat source, remove burning clothing (unless stuck to skin). 2) Cool the burn - run cool (not cold) water over it for 10-20 minutes or apply cool, clean cloths. 3) For minor burns: cover with antibiotic ointment and sterile bandage. 4) Take over-the-counter pain reliever (ibuprofen, acetaminophen). 5) Don't apply ice directly, use butter, or pop blisters. 6) For severe burns (deep, large area, face, joints): call 911, cover with clean dry cloth, elevate burned area if possible, remove jewelry/tight items before swelling occurs. 7) Watch for signs of shock. Seek medical attention for burns larger than 3 inches or on sensitive areas."
+    },
+    {
+        question: "What do I do for a sprain or fracture?",
+        answer: "Use RICE protocol: 1) Rest - stop activity and immobilize the injury. 2) Ice - apply ice for 15-20 minutes, several times daily for first 48-72 hours (reduces swelling). 3) Compression - wrap with elastic bandage (not too tight). 4) Elevation - raise injured area above heart level to reduce swelling. Additionally: take over-the-counter pain reliever, avoid heat for first 48 hours. For suspected fractures: don't move the injured area, immobilize with splint if possible, call 911 if severe. Signs of fracture: severe pain, deformity, inability to bear weight, numbness/tingling."
+    },
+    {
+        question: "How do I survive if I'm lost outdoors?",
+        answer: "Survival priorities in order: 1) Shelter - protect from elements (hypothermia is deadly). Build windbreak or use natural shelter. 2) Water - dehydration is critical. Find clean water source. Boil, filter, or use purification tablets if possible. 3) Fire - provides warmth and signals rescuers. Gather dry materials. 4) Food - less urgent; you can survive weeks without food. 5) Stay in one place if possible - easier for rescuers to find. Signal for help: use mirror, bright cloth, fire smoke, or three of anything (universal distress signal). Conserve energy, stay calm, make smart decisions. Tell someone where you're going before leaving."
+    },
+    {
+        question: "What's in a basic first aid kit and why?",
+        answer: "Essential first aid kit items: Adhesive bandages (minor cuts), gauze pads and tape (bleeding), elastic bandage (sprains), antibiotic ointment (infection prevention), pain relievers (ibuprofen, acetaminophen), antihistamine (allergies), antacid (stomach issues), hydrocortisone cream (itching), tweezers (splinters), scissors, CPR face shield, gloves, thermometer, flashlight with batteries, and a first aid instruction booklet. Keep in accessible location at home, car, and workplace. Check and refresh expiration dates annually. Customize for family needs (add medications for chronic conditions, specific allergies)."
+    },
+    {
+        question: "How do I treat shock?",
+        answer: "Shock is a life-threatening emergency. If someone shows signs (extreme weakness, rapid weak pulse, pale/cold/clammy skin, rapid breathing, confusion, loss of consciousness): 1) Call 911 immediately. 2) Lay person on back. 3) Elevate legs about 12 inches (not if head/spine/leg injury suspected). 4) Keep warm with blankets but don't overheat. 5) Don't give food or water. 6) Loosen tight clothing. 7) Turn head to side if vomiting. 8) Stay with person and monitor breathing. Shock can develop after trauma, severe blood loss, heart attack, severe infection, or extreme allergic reactions. Early recognition and treatment improves survival."
+    },
+    {
+        question: "What should I do for a nosebleed?",
+        answer: "For a nosebleed: 1) Sit upright and lean forward (prevents blood from going down throat). 2) Pinch the soft part of nose below the bridge with thumb and index finger. 3) Keep pressure for 10-15 minutes - don't release to check if bleeding stopped. 4) Breathe through mouth. 5) Apply ice pack to bridge of nose if available. 6) After 15 minutes, release slowly. If bleeding continues, pinch again for another 10 minutes. 7) Once stopped, don't pick or blow nose. 8) Seek medical help if: nosebleed lasts >30 minutes, very heavy bleeding, caused by injury, or recurrent nosebleeds. Avoid blood thinners and hard blowing to prevent recurrence."
+    },
+    {
+        question: "How do I help someone having a panic attack or anxiety?",
+        answer: "If someone is having a panic attack: 1) Stay calm - your calmness helps them. 2) Move to quiet, safe space if possible. 3) Don't dismiss their feelings ('it's all in your head'). 4) Have them sit or lie down. 5) Help slow breathing: 'Breathe in for 4 counts, hold for 4, out for 4' (box breathing). 6) Ground them using senses: 'Name 5 things you see, 4 you can touch, 3 you hear, 2 you smell, 1 you taste.' 7) Use reassuring touch if they're comfortable. 8) Let them know it will pass - panic attacks typically peak in 10 minutes. 9) Don't leave them alone. 10) After, help them rest and recover. If frequent, encourage professional help."
+    },
+    {
+        question: "What are the warning signs of a medical emergency?",
+        answer: "Call 911 or emergency services immediately for: chest pain/pressure, severe difficulty breathing, severe allergic reactions, signs of stroke (facial drooping, arm weakness, speech difficulty), severe bleeding, loss of consciousness, severe injuries, poisoning or overdose, severe abdominal pain, sudden severe headache, signs of shock (pale, rapid pulse, weakness), difficulty speaking, sudden confusion, choking, severe burns, suspected heart attack, or anything life-threatening. When in doubt, call 911 - better safe than sorry. Describe symptoms clearly to dispatcher."
+    },
+    {
+        question: "How do I perform the recovery position?",
+        answer: "Recovery position is used for unconscious people who are breathing: 1) Place person on their side. 2) Tilt head back slightly to keep airway open. 3) Place one arm under head for support. 4) Place other arm across body. 5) Bend one knee for stability. 6) Monitor breathing and be ready to perform CPR if needed. 7) Keep warm with blanket. This position prevents choking if person vomits and keeps airway open. Use if person is unconscious but breathing, before emergency services arrive. Check responsiveness and breathing frequently."
+    },
+    {
+        question: "What's the proper way to bandage a wound?",
+        answer: "To bandage a wound: 1) Clean hands first. 2) Gently clean wound with soap and cool water. 3) Pat dry with clean cloth. 4) Apply thin layer of antibiotic ointment. 5) If bleeding, apply pressure with gauze until bleeding stops. 6) Cover with sterile gauze or bandage. 7) Secure with medical tape (don't make too tight). 8) Change bandage daily or if it gets wet/dirty. 9) Watch for signs of infection: increased redness, warmth, pus, increasing pain. 10) For large or deep wounds, seek medical attention. Proper bandaging prevents infection and promotes healing."
+    },
+    {
+        question: "How do I help someone who is poisoned or overdosed?",
+        answer: "For poisoning or overdose: 1) Call Poison Control (1-800-222-1222 in US) or 911 immediately. 2) Have information ready: what was taken, how much, when, person's age/weight. 3) Don't make them vomit - can cause more harm. 4) If ingested, have them rinse mouth with water. 5) If inhaled, move to fresh air. 6) If on skin, remove contaminated clothing, rinse with water. 7) If unconscious, place in recovery position. 8) Monitor breathing and be ready to perform CPR. 9) Save the substance/container for medical team. 10) Don't leave person alone. Poison Control is free and available 24/7 - they provide expert guidance."
+    },
+    {
+        question: "What should everyone know about dehydration?",
+        answer: "Dehydration occurs when body loses more fluid than taken in. Early signs: thirst, dry mouth, dark urine, fatigue, dizziness. Severe signs: confusion, rapid heartbeat, extreme weakness, fainting. Prevention: drink water regularly (about 8 glasses daily, more in hot weather/exercise), eat water-rich foods. Treatment: drink water gradually (don't chug), electrolyte drinks for severe cases, cool environment, rest. Seek medical help if: severe symptoms, unable to drink, persistent vomiting/diarrhea, unresponsiveness, or symptoms don't improve. Elderly, children, and athletes are at higher risk. Dehydration affects thinking, coordination, and physical performance."
+    },
+    {
+        question: "How do I recognize and treat hypothermia?",
+        answer: "Hypothermia (dangerously low body temperature) signs: shivering, confusion, slurred speech, weakness, numbness, pale skin. Severe: no shivering, loss of consciousness. Treatment: 1) Move to warm area. 2) Remove wet clothing. 3) Wrap in blankets. 4) Warm gradually (don't use direct heat). 5) Give warm (not hot) beverages if conscious and able to swallow. 6) Seek medical help. DON'T: rub skin vigorously, give alcohol, use direct heat (causes shock). Prevention: dress in layers, stay dry, limit time in cold, keep moving. Hypothermia is life-threatening - seek immediate medical attention for severe cases."
+    },
+    {
+        question: "What's the best way to prevent infection?",
+        answer: "Prevent infection through: 1) Hand hygiene - wash hands frequently, especially before eating/touching face, after bathroom, after contact with others. 2) Keep wounds clean and covered. 3) Use hand sanitizer when soap/water unavailable. 4) Don't share personal items (toothbrush, razors, drinks). 5) Practice respiratory hygiene - cover coughs/sneezes with elbow. 6) Keep environment clean. 7) Get vaccinated as recommended. 8) Stay home when sick. 9) Prepare food safely - wash produce, cook meat thoroughly, avoid cross-contamination. 10) Practice good oral hygiene. Hand washing is the single most important infection prevention measure."
+    },
+    {
+        question: "How do I help someone having a seizure?",
+        answer: "If someone is having a seizure: 1) Stay calm. 2) Protect them from injury - move dangerous objects away. 3) Cushion head with something soft. 4) Turn head to side to keep airway clear. 5) DON'T restrain them or force anything in mouth. 6) Time the seizure. 7) Stay with them. 8) After seizure ends, place in recovery position. 9) Check breathing and consciousness. 10) Be reassuring - they may be confused. 11) Call 911 if: first seizure, seizure lasts >5 minutes, multiple seizures, person is injured, or doesn't regain consciousness. Most seizures stop on their own within minutes. Stay calm and protective."
+    },
+    {
+        question: "What are basic survival supplies I should always have?",
+        answer: "Basic emergency/survival supplies: water (1 gallon per person per day, several days supply), non-perishable food, first aid kit, medications, flashlight with batteries, whistle (three blasts = distress signal), multi-tool/knife, rope/paracord, matches/lighter in waterproof container, blanket/emergency blanket, map and compass, phone charger/power bank, cash, important documents copies, duct tape, plastic sheeting, and a battery or hand-crank radio. Keep emergency kit in: home, car, and workplace. Update supplies annually. Personalize for your location/season. In natural disaster, these supplies can sustain you until help arrives."
     }
 ];
 
