@@ -359,6 +359,295 @@ const medicalFacts = [
     }
 ];
 
+// Clinical Cases Database
+const clinicalCases = [
+    {
+        id: 1,
+        title: "Case 1: Type 2 Diabetes with Complications",
+        diagnosis: "Type 2 Diabetes Mellitus with Diabetic Retinopathy",
+        age: "62-year-old male",
+        presentation: "Patient presents with blurred vision, high fasting blood glucose (280 mg/dL), and mild proteinuria. History of poor glucose control.",
+        clinical_findings: "Retinal microaneurysms, hard exudates, HbA1c 9.2%, BMI 32",
+        management: "Intensified glycemic control, ACE inhibitor for proteinuria, referral to ophthalmology, patient education on diet and exercise",
+        learning_points: "Importance of early diabetes management to prevent complications; regular eye screening in diabetic patients"
+    },
+    {
+        id: 2,
+        title: "Case 2: Acute Myocardial Infarction",
+        diagnosis: "ST-Elevation Myocardial Infarction (STEMI)",
+        age: "58-year-old male",
+        presentation: "Sudden onset chest pain radiating to left arm, diaphoresis, dyspnea. Arrived at hospital 2 hours after symptom onset.",
+        clinical_findings: "ST elevation in leads II, III, aVF; elevated troponin I (4.2 ng/mL); ejection fraction 38%",
+        management: "Emergency PCI with stent placement, dual antiplatelet therapy, ACE inhibitor, beta-blocker, cardiac rehabilitation",
+        learning_points: "Time is muscle in STEMI management; importance of rapid reperfusion therapy; post-MI rehabilitation critical"
+    },
+    {
+        id: 3,
+        title: "Case 3: Severe Asthma Exacerbation",
+        diagnosis: "Acute Severe Asthma Attack (Status Asthmaticus)",
+        age: "24-year-old female",
+        presentation: "Acute onset severe dyspnea, wheezing, inability to speak full sentences. Triggered by upper respiratory infection.",
+        clinical_findings: "Peak flow 35% predicted, SpO2 88%, using accessory muscles, silent chest on auscultation",
+        management: "IV methylprednisolone, continuous albuterol nebulization, ipratropium, IV magnesium, supplemental oxygen, ICU admission",
+        learning_points: "Recognition of severe asthma exacerbation; importance of rapid treatment initiation; need for close monitoring"
+    },
+    {
+        id: 4,
+        title: "Case 4: Acute Bacterial Meningitis",
+        diagnosis: "Bacterial Meningitis (Streptococcus pneumoniae)",
+        age: "34-year-old male",
+        presentation: "High fever, severe headache, neck stiffness, photophobia, confusion. Presented to ER with rapid deterioration.",
+        clinical_findings: "Petechial rash, positive Kernig and Brudzinski signs, CSF analysis showing high protein and low glucose",
+        management: "Empiric antibiotics (ceftriaxone, vancomycin), dexamethasone, supportive care, ICU monitoring",
+        learning_points: "Meningitis is a medical emergency requiring immediate antibiotics; lumbar puncture and CSF analysis crucial; empiric therapy before culture results"
+    },
+    {
+        id: 5,
+        title: "Case 5: Acute Appendicitis",
+        diagnosis: "Acute Appendicitis",
+        age: "19-year-old female",
+        presentation: "Right lower quadrant pain that started periumbilically and migrated, nausea, fever (38.5°C). Classic presentation.",
+        clinical_findings: "McBurney's point tenderness, positive Rovsing's sign, mild leukocytosis (WBC 12,500), CT shows inflamed appendix",
+        management: "Emergency appendectomy, prophylactic antibiotics, IV fluids, pain management",
+        learning_points: "Classic teaching case for appendicitis; diagnostic imaging improves accuracy; surgical intervention prevents perforation"
+    },
+    {
+        id: 6,
+        title: "Case 6: Pulmonary Embolism",
+        diagnosis: "Acute Pulmonary Embolism",
+        age: "52-year-old female",
+        presentation: "Sudden onset dyspnea and chest pain post-flight (long haul from Europe). Risk factors: recent surgery, oral contraceptives.",
+        clinical_findings: "Elevated D-dimer (>500), CT pulmonary angiography shows filling defect in right pulmonary artery, mild hypoxia (SpO2 93%)",
+        management: "Anticoagulation with unfractionated heparin bridging to warfarin, oxygen, monitoring for hemodynamic instability",
+        learning_points: "Post-travel thrombotic risk; importance of D-dimer and CTPA in diagnosis; anticoagulation prevents recurrence"
+    },
+    {
+        id: 7,
+        title: "Case 7: Severe Sepsis from Urinary Tract Infection",
+        diagnosis: "Urosepsis with Septic Shock",
+        age: "78-year-old male",
+        presentation: "Fever, hypotension, confusion, frequent urination with dysuria. Community-acquired infection.",
+        clinical_findings: "BP 85/50, HR 112, RR 24, lactate 4.2 mmol/L, positive urine and blood cultures (E. coli)",
+        management: "Broad-spectrum antibiotics (piperacillin-tazobactam), IV fluid resuscitation, vasopressors, source control",
+        learning_points: "Sepsis in elderly from UTI source; importance of rapid fluid resuscitation and antibiotics; septic shock mortality significant"
+    },
+    {
+        id: 8,
+        title: "Case 8: Acute Stroke (Ischemic)",
+        diagnosis: "Acute Ischemic Stroke - Middle Cerebral Artery",
+        age: "68-year-old male",
+        presentation: "Sudden onset weakness on left side, slurred speech, facial droop. Wife called 911 immediately (2 hours from onset).",
+        clinical_findings: "NIHSS score 14, CT head negative for hemorrhage, MRI shows acute infarct in right MCA territory",
+        management: "IV thrombolysis (alteplase), aspirin, statin, monitoring in stroke unit, physical/occupational therapy",
+        learning_points: "Time-window critical for thrombolysis; imaging crucial to rule out hemorrhage; acute rehabilitation improves outcomes"
+    },
+    {
+        id: 9,
+        title: "Case 9: Acute Pancreatitis",
+        diagnosis: "Acute Biliary Pancreatitis",
+        age: "45-year-old female",
+        presentation: "Sudden severe epigastric pain radiating to back, nausea/vomiting, history of gallstones on ultrasound.",
+        clinical_findings: "Lipase 1,200 U/L, amylase 950 U/L, mild hyperglycemia, transabdominal ultrasound confirms gallstones",
+        management: "NPO, IV hydration, pain management, H2-blocker, ERCP if biliary obstruction, cholecystectomy after recovery",
+        learning_points: "Gallstones most common cause of pancreatitis; supportive care is mainstay; ERCP indicated if obstruction suspected"
+    },
+    {
+        id: 10,
+        title: "Case 10: Anaphylactic Shock",
+        diagnosis: "Anaphylaxis (Peanut Allergy)",
+        age: "28-year-old male",
+        presentation: "Ingested food containing peanuts, developed urticaria, angioedema, dyspnea, hypotension within 10 minutes.",
+        clinical_findings: "BP 90/55, HR 135, diffuse urticaria, lip/tongue swelling, wheezing, tryptase elevated",
+        management: "IM epinephrine (0.3 mg), IV access, antihistamines, corticosteroids, oxygen, observation for biphasic reaction",
+        learning_points: "Epinephrine is first-line treatment; rapid recognition is critical; risk of biphasic reaction requires observation"
+    },
+    {
+        id: 11,
+        title: "Case 11: Community-Acquired Pneumonia",
+        diagnosis: "Community-Acquired Pneumonia (Streptococcus pneumoniae)",
+        age: "71-year-old male",
+        presentation: "Productive cough with rusty sputum, fever (39.2°C), chest pain, dyspnea. Recent URI.",
+        clinical_findings: "Consolidation in left lower lobe on CXR, elevated CRP, WBC 14,200, positive pneumococcal urinary antigen",
+        management: "Empiric antibiotics (amoxicillin-clavulanate), supplemental oxygen, observation for complications",
+        learning_points: "Typical CAP presentation; chest imaging aids diagnosis; empiric therapy covers common pathogens; prognosis generally good"
+    },
+    {
+        id: 12,
+        title: "Case 12: Diabetic Ketoacidosis",
+        diagnosis: "Diabetic Ketoacidosis (Type 1 Diabetes)",
+        age: "22-year-old female",
+        presentation: "Recent diagnosis of Type 1 diabetes, non-compliance with insulin, polyuria, polydipsia, Kussmaul respirations.",
+        clinical_findings: "Blood glucose 520 mg/dL, arterial pH 7.25, HCO3 12 mEq/L, positive ketones, anion gap metabolic acidosis",
+        management: "IV insulin, aggressive fluid resuscitation, electrolyte replacement, bicarbonate if severe acidosis, ICU monitoring",
+        learning_points: "DKA is medical emergency; insulin therapy critical; fluid and electrolyte management complex; education prevents recurrence"
+    },
+    {
+        id: 13,
+        title: "Case 13: Acute Coronary Syndrome (Unstable Angina)",
+        diagnosis: "Unstable Angina Pectoris",
+        age: "55-year-old male",
+        presentation: "New onset chest pain at rest with increasing frequency, not relieved by nitrates, risk factors present.",
+        clinical_findings: "EKG shows ST depression and T-wave inversion in anterolateral leads; troponin negative initially then mildly elevated",
+        management: "Dual antiplatelet therapy, anticoagulation, beta-blocker, ACE inhibitor, coronary angiography",
+        learning_points: "ACS spectrum includes unstable angina; EKG changes and troponin guide management; invasive strategy reduces recurrent events"
+    },
+    {
+        id: 14,
+        title: "Case 14: Acute Kidney Injury",
+        diagnosis: "Acute Kidney Injury (Post-hypotensive episode)",
+        age: "64-year-old male",
+        presentation: "Severe dehydration from gastroenteritis, oliguria, confusion. Presented 3 days after symptom onset.",
+        clinical_findings: "Creatinine 4.2 mg/dL (baseline 1.0), BUN 85 mg/dL, hyperkalemia 6.2 mEq/L, urinary sodium <20 mEq/L",
+        management: "IV fluid resuscitation, electrolyte management, monitoring renal function, consideration of dialysis if needed",
+        learning_points: "AKI reversible if cause addressed; prerenal azotemia differentiable by urinary sodium; volume status crucial"
+    },
+    {
+        id: 15,
+        title: "Case 15: Acute Exacerbation of COPD",
+        diagnosis: "COPD Exacerbation (Alpha-1 Antitrypsin Deficiency)",
+        age: "58-year-old male",
+        presentation: "Increased dyspnea, sputum production, wheezing. Smoker with advanced COPD, FEV1 35% predicted.",
+        clinical_findings: "SpO2 86% on room air, hyperinflation on CXR, elevated CO2 (62 mmHg), yellow sputum",
+        management: "Supplemental oxygen (with caution for CO2 retention), bronchodilators, systemic corticosteroids, antibiotics if infected",
+        learning_points: "Careful oxygen titration in CO2 retainers; identification of infection; education on smoking cessation critical"
+    },
+    {
+        id: 16,
+        title: "Case 16: Acute Myxedema Coma",
+        diagnosis: "Myxedema Coma (Severe Hypothyroidism)",
+        age: "72-year-old female",
+        presentation: "Altered mental status, bradycardia (45 bpm), severe hypothermia (32°C), confusion, history of untreated hypothyroidism.",
+        clinical_findings: "TSH >100 mIU/L, free T4 <0.4 ng/dL, hypoglycemia, hyponatremia, severe bradycardia",
+        management: "IV levothyroxine, passive rewarming, supportive care, vasopressors if hypotensive, ICU monitoring",
+        learning_points: "Medical emergency with high mortality; hypothermia and altered mental status key features; slow rewarming reduces complications"
+    },
+    {
+        id: 17,
+        title: "Case 17: Acute Hepatic Encephalopathy",
+        diagnosis: "Hepatic Encephalopathy (Cirrhosis Decompensation)",
+        age: "54-year-old male",
+        presentation: "Altered mental status, asterixis, confusion. History of alcoholic cirrhosis with known varices.",
+        clinical_findings: "Elevated ammonia (150 μmol/L), INR 2.8, albumin 2.1 g/dL, elevated bilirubin, altered EEG",
+        management: "Lactulose, rifaxomicin, protein restriction, treatment of precipitants, evaluation for transplant candidacy",
+        learning_points: "Hepatic encephalopathy indicates advanced liver disease; ammonia not always correlates; multifactorial approach needed"
+    },
+    {
+        id: 18,
+        title: "Case 18: Guillain-Barré Syndrome",
+        diagnosis: "Acute Inflammatory Demyelinating Polyneuropathy (AIDP)",
+        age: "35-year-old female",
+        presentation: "Ascending paralysis starting in legs, progressing to arms and face over several days. Recent GI infection.",
+        clinical_findings: "Weakness in lower extremities spreading upward, diminished deep tendon reflexes, elevated CSF protein, EMG findings suggestive",
+        management: "IVIG or plasmapheresis, supportive care, respiratory support if needed, rehabilitation",
+        learning_points: "GBS is autoimmune neurological emergency; ascending paralysis is classic; early immunotherapy improves outcomes"
+    },
+    {
+        id: 19,
+        title: "Case 19: Acute Angle-Closure Glaucoma",
+        diagnosis: "Acute Angle-Closure Glaucoma",
+        age: "62-year-old female",
+        presentation: "Sudden severe eye pain, blurred vision, headache, nausea/vomiting, halos around lights.",
+        clinical_findings: "IOP >40 mmHg, corneal edema, fixed mid-dilated pupil, narrow angles on gonioscopy",
+        management: "Topical and systemic medications (prostaglandin analogs, beta-blockers, carbonic anhydrase inhibitors), emergency laser iridotomy",
+        learning_points: "Ophthalmic emergency requiring immediate treatment; laser iridotomy prevents attack in fellow eye; high stakes for vision"
+    },
+    {
+        id: 20,
+        title: "Case 20: Thyroid Storm",
+        diagnosis: "Thyroid Storm (Grave's Disease Decompensation)",
+        age: "28-year-old female",
+        presentation: "High fever (40.5°C), tachycardia (140 bpm), confusion, tremor, agitation. Recent stressor after inadequate antithyroid therapy.",
+        clinical_findings: "TSH <0.01 mIU/L, free T4 >7.77 ng/dL, elevated cardiac enzymes, hyperglycemia, shock-like presentation",
+        management: "Antithyroid drugs (PTU preferred), beta-blockade, iodine solution, corticosteroids, plasmapheresis if refractory, ICU care",
+        learning_points: "Thyroid storm is medical emergency with high mortality; recognition critical; multifactorial management essential"
+    }
+];
+
+// FAQ Database
+const faqItems = [
+    {
+        question: "What is the difference between Autism and ADHD?",
+        answer: "Autism Spectrum Disorder (ASD) and ADHD are distinct neurodevelopmental conditions. Autism is characterized by differences in social communication, sensory processing, and behavioral patterns. ADHD involves difficulties with attention, impulse control, and activity regulation. While they can co-occur and share some similarities, they are separate diagnoses requiring different support strategies. Some autistic individuals may also have ADHD, and vice versa."
+    },
+    {
+        question: "How can I tell the difference between a migraine and a tension headache?",
+        answer: "Migraines typically involve severe throbbing pain on one side of the head, often accompanied by nausea, sensitivity to light (photophobia), and sensitivity to sound. They can last 4-72 hours. Tension headaches cause a dull, pressing sensation across the head and scalp, are usually bilateral, and last 30 minutes to several hours. Migraines are often more disabling and may have an aura (visual disturbances) beforehand."
+    },
+    {
+        question: "What should I do if I suspect I'm having a heart attack?",
+        answer: "Call emergency services (911 in the US) immediately. Do not drive yourself. Chew an aspirin if available and not allergic. Sit or lie down in a comfortable position and try to stay calm. Describe your symptoms to the dispatcher. Time is critical in heart attacks - early treatment can minimize heart damage. Do not wait to see if symptoms go away; seek immediate medical attention."
+    },
+    {
+        question: "How is Type 2 Diabetes different from Type 1?",
+        answer: "Type 1 Diabetes is an autoimmune condition where the pancreas produces little to no insulin. It's usually diagnosed in children and young adults and requires insulin therapy. Type 2 Diabetes occurs when the body can't effectively use insulin (insulin resistance) and typically develops in adults, though increasingly in young people. Type 2 is often managed with lifestyle modifications, oral medications, or injectable medications, with insulin as a later option."
+    },
+    {
+        question: "What are the early warning signs of a stroke?",
+        answer: "Remember 'FAST': Face drooping, Arm weakness, Speech difficulty, Time to call 911. Other signs include sudden vision changes, dizziness, loss of balance, severe headache, and difficulty walking. Seek immediate emergency care if you notice any of these symptoms. Rapid treatment within the first few hours can be life-saving and minimize brain damage."
+    },
+    {
+        question: "Can neurodivergent conditions be cured?",
+        answer: "Autism, ADHD, and other neurodevelopmental conditions are differences in how the brain is wired - not diseases to be cured. The neurodiversity paradigm emphasizes that neurodivergent individuals have strengths and abilities alongside challenges. Rather than 'curing,' the focus is on support, accommodations, and helping individuals thrive. Therapy, medication when appropriate, and environmental modifications can help manage symptoms and improve quality of life."
+    },
+    {
+        question: "What's the difference between chronic pain and acute pain?",
+        answer: "Acute pain is a normal response to injury or illness, usually lasting less than 3-6 months and resolving as the underlying condition heals. Chronic pain persists beyond the expected healing time or occurs from ongoing conditions. Chronic pain involves complex nervous system changes (central sensitization) and requires different management approaches including multimodal therapy combining physical, psychological, and pharmacological interventions."
+    },
+    {
+        question: "How is high blood pressure treated?",
+        answer: "Treatment starts with lifestyle modifications: reducing sodium intake, regular exercise, maintaining healthy weight, limiting alcohol, and stress management. If lifestyle changes aren't sufficient, medications are prescribed, often starting with ACE inhibitors, ARBs, beta-blockers, or diuretics. Treatment is individualized based on other health conditions, age, and response to medication. Regular monitoring is essential."
+    },
+    {
+        question: "What should I know about antibiotics?",
+        answer: "Antibiotics only treat bacterial infections, not viral infections like the common cold. Taking antibiotics unnecessarily contributes to antibiotic resistance, making infections harder to treat. Always complete the full course even if you feel better. Report any allergies to your doctor. Common side effects include stomach upset and yeast infections. Never share antibiotics with others or use old prescriptions."
+    },
+    {
+        question: "How can I improve my mental health?",
+        answer: "Mental health improvement involves multiple approaches: regular exercise, adequate sleep, healthy nutrition, stress management techniques, social connection, and seeking professional help when needed. Therapy (CBT, DBT, psychotherapy) and meditation/mindfulness can be beneficial. If experiencing depression or anxiety, don't hesitate to talk to a healthcare provider. Mental health is as important as physical health."
+    },
+    {
+        question: "What is the safest way to manage pain?",
+        answer: "Multimodal pain management combines multiple strategies: physical therapy, non-medication techniques (heat, ice, relaxation), non-opioid medications (acetaminophen, NSAIDs), and when appropriate, prescription medications. Opioids should be used cautiously due to addiction risk. Talk to your doctor about all options. Chronic pain often requires a team approach including physical therapists, psychologists, and physicians."
+    },
+    {
+        question: "What are the benefits of regular exercise?",
+        answer: "Regular exercise improves cardiovascular health, strengthens muscles and bones, helps maintain healthy weight, improves mental health and mood, reduces disease risk, and increases longevity. Aim for 150 minutes of moderate-intensity or 75 minutes of vigorous-intensity aerobic activity weekly, plus strength training twice weekly. Start slowly and consult your doctor before starting a new exercise program, especially if you have health conditions."
+    },
+    {
+        question: "How long does it typically take to recover from surgery?",
+        answer: "Recovery time varies widely depending on the type and extent of surgery. Minor procedures may have recovery in days to weeks, while major surgery can take weeks to months. Factors include age, overall health, type of anesthesia, and post-operative complications. Follow post-operative instructions carefully, including wound care, activity restrictions, and medication. Pain and fatigue are normal post-operative symptoms."
+    },
+    {
+        question: "What is the importance of preventive care?",
+        answer: "Preventive care catches health issues early when they're easier to treat, reduces serious complications, and often costs less long-term than treating advanced diseases. This includes regular screenings, vaccinations, health checks, and lifestyle modifications. Early detection of conditions like cancer, diabetes, and heart disease significantly improves outcomes. Talk to your doctor about age-appropriate screenings."
+    },
+    {
+        question: "How can I manage anxiety without medication?",
+        answer: "Non-medication strategies include breathing exercises, progressive muscle relaxation, mindfulness meditation, regular exercise, limiting caffeine, ensuring adequate sleep, and cognitive behavioral techniques. Therapy can teach coping strategies. Social support from friends and family is helpful. While these techniques work well for some, others may benefit from medication in combination with these approaches. Discuss options with a healthcare provider."
+    },
+    {
+        question: "What should I know about vaccines?",
+        answer: "Vaccines train your immune system to recognize and fight diseases, either preventing infection or reducing severity. They're among the most effective public health interventions, having eradicated or controlled many dangerous diseases. Common side effects are mild (arm soreness, low fever). Serious side effects are very rare. Talk to your doctor about which vaccines are appropriate for your age and health status."
+    },
+    {
+        question: "How is fibromyalgia diagnosed and managed?",
+        answer: "Fibromyalgia is diagnosed through clinical criteria: widespread pain lasting >3 months and tender point assessment (though new diagnostic criteria exist). No blood test definitively diagnoses it. Management includes regular low-impact exercise, sleep hygiene, cognitive behavioral therapy, stress management, and medications like duloxetine or pregabalin. Multimodal approach works best. Support groups and patient education are valuable."
+    },
+    {
+        question: "What is the role of sleep in health?",
+        answer: "Quality sleep is essential for immune function, cognitive performance, emotional regulation, metabolism, and overall health. Adults need 7-9 hours nightly. Poor sleep increases risk of obesity, diabetes, cardiovascular disease, depression, and accidents. Sleep hygiene tips: consistent schedule, dark cool room, no screens before bed, exercise regularly, limit caffeine/alcohol. If sleep problems persist, consult a healthcare provider."
+    },
+    {
+        question: "How do I know if I need to see a doctor?",
+        answer: "Seek immediate medical attention for chest pain, severe bleeding, severe allergic reactions, signs of stroke, or severe injuries. Call your doctor for persistent symptoms lasting >1-2 weeks, severe pain, high fever, or symptoms affecting daily function. Schedule regular check-ups even when feeling well for preventive care and screening. Trust your instincts - if something feels wrong, it's worth getting checked."
+    },
+    {
+        question: "What is the most important thing I can do for my health?",
+        answer: "Build strong relationships and social connections - loneliness and isolation are linked to poor health outcomes. Also essential: regular exercise, healthy eating, adequate sleep, stress management, not smoking, limiting alcohol, and preventive healthcare. The combination of physical health behaviors and social-emotional well-being creates the foundation for optimal health. Start with small sustainable changes and build from there."
+    }
+];
+
+
 // Set today's date as default
 document.getElementById('date').valueAsDate = new Date();
 
@@ -368,6 +657,8 @@ document.addEventListener('DOMContentLoaded', function() {
     renderConditions(medicalConditions);
     renderNeuroDiversity(neuroDiversityConditions);
     renderFacts();
+    renderClinicalCases(clinicalCases);
+    renderFAQ();
     setupEventListeners();
 });
 
@@ -385,6 +676,9 @@ function setupEventListeners() {
     document.getElementById('neuroFilterAutismBtn').addEventListener('click', () => filterNeuro('autism'));
     document.getElementById('neuroFilterADHDBtn').addEventListener('click', () => filterNeuro('adhd'));
     document.getElementById('neuroFilterPainBtn').addEventListener('click', () => filterNeuro('chronic-pain'));
+    
+    // Clinical cases event listener
+    document.getElementById('searchCases').addEventListener('input', handleSearchCases);
 }
 
 // Handle Form Submission
@@ -601,6 +895,86 @@ function renderFacts() {
             <div class="fact-content">${fact.content}</div>
         </div>
     `).join('');
+}
+
+// Render Clinical Cases
+function renderClinicalCases(cases) {
+    const casesList = document.getElementById('casesList');
+
+    if (cases.length === 0) {
+        casesList.innerHTML = '<div class="empty-state"><p>No cases found. Try a different search.</p></div>';
+        return;
+    }
+
+    casesList.innerHTML = cases.map(clinicalCase => `
+        <div class="case-card">
+            <div class="case-header">
+                <div class="case-title">${clinicalCase.title}</div>
+                <span class="case-id">Case #${clinicalCase.id}</span>
+            </div>
+            <div class="case-content">
+                <div class="case-item">
+                    <strong>Diagnosis:</strong> ${clinicalCase.diagnosis}
+                </div>
+                <div class="case-item">
+                    <strong>Patient:</strong> ${clinicalCase.age}
+                </div>
+                <div class="case-item">
+                    <strong>Presentation:</strong><br>${clinicalCase.presentation}
+                </div>
+                <div class="case-item">
+                    <strong>Clinical Findings:</strong><br>${clinicalCase.clinical_findings}
+                </div>
+                <div class="case-item">
+                    <strong>Management:</strong><br>${clinicalCase.management}
+                </div>
+                <div class="case-item learning">
+                    <strong>🎓 Learning Points:</strong><br>${clinicalCase.learning_points}
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+// Search Clinical Cases
+function handleSearchCases(e) {
+    const query = e.target.value.toLowerCase();
+    const filtered = clinicalCases.filter(clinicalCase =>
+        clinicalCase.title.toLowerCase().includes(query) ||
+        clinicalCase.diagnosis.toLowerCase().includes(query) ||
+        clinicalCase.presentation.toLowerCase().includes(query) ||
+        clinicalCase.clinical_findings.toLowerCase().includes(query)
+    );
+    renderClinicalCases(filtered);
+}
+
+// Render FAQ
+function renderFAQ() {
+    const faqContainer = document.getElementById('faqContainer');
+    
+    faqContainer.innerHTML = faqItems.map((item, index) => `
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(${index})">
+                <span>${item.question}</span>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-${index}">
+                <p>${item.answer}</p>
+            </div>
+        </div>
+    `).join('');
+}
+
+// Toggle FAQ Answer
+function toggleFAQ(index) {
+    const answer = document.getElementById(`faq-answer-${index}`);
+    const button = answer.previousElementSibling;
+    
+    answer.classList.toggle('active');
+    button.classList.toggle('active');
+    
+    const icon = button.querySelector('.faq-icon');
+    icon.textContent = answer.classList.contains('active') ? '−' : '+';
 }
 
 // Show Notification
